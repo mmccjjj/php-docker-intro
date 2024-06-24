@@ -1,0 +1,17 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+header{
+    height: 15vw;
+    width: 100vw;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+footer{
+    align-self: flex-end;
+}

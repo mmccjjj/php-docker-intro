@@ -11,8 +11,33 @@
 <body>
 
   <?php
+  include './utils/prettyPrint.php';
 
-  phpinfo();
+  $workDays= [
+    "Montag", "Dienstag", "Mittwoch", "Donnerstag"
+  ];
+
+  prettyPrint($workDays);
+  test(5,5);
+
+  /* phpinfo(); */
+  $name= "...";
+
+  session_start();
+
+  if (!empty($_SESSION['fname'])){
+    $name= $_SESSION['fname'];
+  }
+  
+
+  echo " <h1>Hello World My Name is $name</h1>";
+
+  echo "<form action='welcome.php' method= 'POST'>";
+  echo "<input type= 'text' name= 'first_name'>";
+  echo "<input type= 'text' name= 'last_name'>";
+  echo "<button type 'submit'>Absenden</button>";
+  echo "</form>";
+
 
   ?>
 
